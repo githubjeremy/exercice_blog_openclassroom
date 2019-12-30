@@ -1,0 +1,7 @@
+<div [ngClass]="{'mb-3': true, 'list-group-item': true, 'list-group-item-success': post.loveIts === true, 'list-group-item-danger': post.loveIts === false}">
+    <h3>{{post.title}}</h3>
+    <p>{{post.created_at | date : 'short'}}</p>
+    <p>{{post.content}}</p>
+    <button class="btn btn-success mr-2" (click)="onclickLove(post)">Love it!</button>
+    <button class="btn btn-danger" (click)="onclickDontLove(post)">Don't love it!</button>
+</div>
